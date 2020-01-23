@@ -32,6 +32,17 @@ class Quiz extends Component {
 					{ text: '1803', id: 4 },
 				],
 			},
+			{
+				question: 'Сколько ножек у осьминожек?',
+				reightAnswerId: 4,
+				id: 3,
+				answers: [
+					{ text: 'Восемь', id: 1 },
+					{ text: 'Семь', id: 2 },
+					{ text: 'Шесть', id: 3 },
+					{ text: 'Две', id: 4 },
+				],
+			},
 		],
 	};
 
@@ -88,6 +99,11 @@ class Quiz extends Component {
 			results: {},
 		});
 	};
+
+	componentDidMount() {
+		console.log('Quiz ID= ', this.props.match.params.id);
+	}
+
 	render() {
 		return (
 			<div className={classes.Quiz}>
