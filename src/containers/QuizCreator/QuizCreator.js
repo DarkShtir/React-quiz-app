@@ -88,6 +88,7 @@ export default class QuizCreator extends Component {
 			],
 		};
 		quiz.push(questionItem);
+
 		this.setState({
 			quiz,
 			isFormValid: false,
@@ -100,6 +101,7 @@ export default class QuizCreator extends Component {
 		event.preventDefault();
 		try {
 			await axios.post('/quizes.json', this.state.quiz);
+
 			this.setState({
 				quiz: [],
 				isFormValid: false,
